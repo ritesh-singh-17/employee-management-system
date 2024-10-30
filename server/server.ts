@@ -25,13 +25,13 @@ const dirname = path.resolve();
 
 const app: Application = express();
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "https://employee-management-system-r.vercel.app/"];
+// const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "https://employee-management-system-r.vercel.app/"];
 
-const options: cors.CorsOptions = {
-  origin: allowedOrigins,
-};
+// const options: cors.CorsOptions = {
+//   origin: allowedOrigins,
+// };
 
-app.use(cors(options));
+app.use(cors());
 
 app.use(express.json());
 
