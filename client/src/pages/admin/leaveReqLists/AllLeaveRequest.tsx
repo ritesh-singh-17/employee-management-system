@@ -30,7 +30,7 @@ const AllLeaveRequest = () => {
   const fetchAllLeaveRequest = async () => {
     try {
       const leaveData = await axios.get(
-        "http://localhost:5000/api/v1/leaveRequest",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/leaveRequest",
         {
           headers: {
             "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const AllLeaveRequest = () => {
   const postRequestResolve = async (value: string, id: string) => {
     try {
       const resolvedData = await axios.put(
-        `http://localhost:5000/api/v1/leaveRequest/resolve/${id}`,
+        `https://employee-management-system-server-4kzb.onrender.com/api/v1/leaveRequest/resolve/${id}`,
         {
           leaveStatus: value,
           resolvedBy: userData,

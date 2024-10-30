@@ -30,7 +30,7 @@ const Projects = ({
   const getProjectData = async () => {
     try {
       const res = await axios(
-        `http://localhost:5000/api/v1/projects?currentPage=${currentPage}&currentLimit=${currentLimit}`
+        `https://employee-management-system-server-4kzb.onrender.com/api/v1/projects?currentPage=${currentPage}&currentLimit=${currentLimit}`
       );
       const json = await res.data;
       const { projects, pages, limit } = json;

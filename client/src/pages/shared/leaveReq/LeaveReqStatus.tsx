@@ -13,7 +13,7 @@ const LeaveReqStatus = () => {
   const fetchAllLeaveRequest = async () => {
     try {
       const leaveData = await axios.get(
-        "http://localhost:5000/api/v1/leaveRequest",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/leaveRequest",
         {
           headers: {
             "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const ChangePassword = () => {
 
   const changePassword = async () => {
     const res = await axios.put(
-      "http://localhost:5000/api/v1/profile/changePassword",
+      "https://employee-management-system-server-4kzb.onrender.com/api/v1/profile/changePassword",
       { password: newPassword },
       {
         headers: {
@@ -49,7 +49,7 @@ const ChangePassword = () => {
 
   const forgetPassword = async () => {
     const res = await axios.put(
-      "http://localhost:5000/api/v1/resetPassword/newPassword",
+      "https://employee-management-system-server-4kzb.onrender.com/api/v1/resetPassword/newPassword",
       {
         password: newPassword,
         id: decoded._id,

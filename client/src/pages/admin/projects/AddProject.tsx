@@ -60,7 +60,7 @@ const AddProject = () => {
     if (projectId) {
       const getData = async () => {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/projects/${projectId}`,
+          `https://employee-management-system-server-4kzb.onrender.com/api/v1/projects/${projectId}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const AddProject = () => {
     };
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/v1/addprojects",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/addprojects",
         formik.values,
         {
           headers: headers,
@@ -112,7 +112,7 @@ const AddProject = () => {
     };
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/v1/projects/${projectId}`,
+        `https://employee-management-system-server-4kzb.onrender.com/api/v1/projects/${projectId}`,
         formik.values,
         {
           headers: headers,
@@ -132,7 +132,7 @@ const AddProject = () => {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     };
     try {
-      const res = await axios.get("http://localhost:5000/api/v1/employee", {
+      const res = await axios.get("https://employee-management-system-server-4kzb.onrender.com/api/v1/employee", {
         headers: headers,
       });
       const json = await res.data;

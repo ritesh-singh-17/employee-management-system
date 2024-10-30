@@ -29,7 +29,7 @@ const Login = ({ socket }: any) => {
 
   const postData = () => {
     axios
-      .post("http://localhost:5000/api/v1/login", {
+      .post("https://employee-management-system-server-4kzb.onrender.com/api/v1/login", {
         email: email,
         password: password,
       })

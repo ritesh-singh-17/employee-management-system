@@ -46,7 +46,7 @@ const DataTable = ({
 
   const handleProjectDelete = async (id: any) => {
     const removeData = await axios.delete(
-      `http://localhost:5000/api/v1/projects/${id}`,
+      `https://employee-management-system-server-4kzb.onrender.com/api/v1/projects/${id}`,
       {
         headers: {
           "Content-Type": "application/json",

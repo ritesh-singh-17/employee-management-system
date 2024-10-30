@@ -17,7 +17,7 @@ const ForgetPasswordVerify = () => {
   const postUserData = async () => {
     setLoading(true);
     const userData = await axios.get(
-      `http://localhost:5000/api/v1/resetPassword/${id}/${token}`
+      `https://employee-management-system-server-4kzb.onrender.com/api/v1/resetPassword/${id}/${token}`
     );
     if (userData.data) {
       const { decoded } = userData.data;

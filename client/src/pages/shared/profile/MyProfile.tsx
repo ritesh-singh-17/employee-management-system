@@ -30,7 +30,7 @@ const MyProfile = () => {
 
   const profileDetails = async () => {
     const response = await axios(
-      `http://localhost:5000/api/v1/employee/${profileId}`,
+      `https://employee-management-system-server-4kzb.onrender.com/api/v1/employee/${profileId}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -43,7 +43,7 @@ const MyProfile = () => {
 
   const fecthData = async () => {
     try {
-      const response = await axios("http://localhost:5000/api/v1/profile", {
+      const response = await axios("https://employee-management-system-server-4kzb.onrender.com/api/v1/profile", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -59,7 +59,7 @@ const MyProfile = () => {
 
   const handleProfileDelete = async (id: string) => {
     const removeData = await axios.delete(
-      `http://localhost:5000/api/v1/employee/${id}`,
+      `https://employee-management-system-server-4kzb.onrender.com/api/v1/employee/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -204,7 +204,7 @@ const MyProfile = () => {
               <p>Joinning Date: {profile?.joingDate}</p>
               <p>image</p>
               <img
-                src={`http://localhost:5000${profile?.image}`}
+                src={`https://employee-management-system-server-4kzb.onrender.com${profile?.image}`}
                 alt=""
                 style={{ height: "10rem", width: "10rem" }}
               />

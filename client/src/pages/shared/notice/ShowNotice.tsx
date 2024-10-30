@@ -13,7 +13,7 @@ const ShowNotice = () => {
 
   const getNotice = async () => {
     try {
-      axios.get("http://localhost:5000/api/v1/notice").then((res) => {
+      axios.get("https://employee-management-system-server-4kzb.onrender.com/api/v1/notice").then((res) => {
         const data = res.data;
         const user: any = JSON.parse(localStorage.getItem("user") || "{}");
 

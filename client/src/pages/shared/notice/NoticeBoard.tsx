@@ -26,7 +26,7 @@ const NoticeBoard = () => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/noticeFileUploads",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/noticeFileUploads",
         formData,
         config
       );
@@ -40,7 +40,7 @@ const NoticeBoard = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/notice",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/notice",
         {
           email: notice.email,
           noticeTitle: notice.title,

@@ -25,7 +25,7 @@ const Profiles = ({
 
   const fecthProfiles = async () => {
     try {
-      const response = await axios("http://localhost:5000/api/v1/employee", {
+      const response = await axios("https://employee-management-system-server-4kzb.onrender.com/api/v1/employee", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

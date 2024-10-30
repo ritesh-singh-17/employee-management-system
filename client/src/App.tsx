@@ -28,7 +28,7 @@ function App() {
   const [user, setUser] = useState < any > (null);
 
   useEffect(() => {
-    setSocket(io("http://localhost:5000"));
+    setSocket(io("https://employee-management-system-server-4kzb.onrender.com"));
   }, []);
 
   useEffect(() => {

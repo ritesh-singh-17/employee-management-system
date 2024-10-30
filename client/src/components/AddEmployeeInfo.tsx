@@ -50,7 +50,7 @@ const AddEmployeeInfo = ({
       };
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/uploads",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/uploads",
         formData,
         config
       );
@@ -64,7 +64,7 @@ const AddEmployeeInfo = ({
   const updatedMyProfileData = async () => {
     try {
       const updateData = await axios.put(
-        "http://localhost:5000/api/v1/profile/edit",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/profile/edit",
         employeeDetails,
         {
           headers: {

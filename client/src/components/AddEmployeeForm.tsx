@@ -131,7 +131,7 @@ const AddEmployeeForm = ({
       const checkData = checkValue();
       if (checkData === true) {
         const postData = await axios.post(
-          "http://localhost:5000/api/v1/addemployee",
+          "https://employee-management-system-server-4kzb.onrender.com/api/v1/addemployee",
           employeeDetails,
           {
             headers: {
@@ -169,7 +169,7 @@ const AddEmployeeForm = ({
 
   useEffect(() => {
     try {
-      axios.get("http://localhost:5000/api/v1/projects").then((res) => {
+      axios.get("https://employee-management-system-server-4kzb.onrender.com/api/v1/projects").then((res) => {
         setProjectList(res.data);
       });
     } catch (error) {
@@ -182,7 +182,7 @@ const AddEmployeeForm = ({
   const getProfile = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/v1/employee/${profileId}`,
+        `https://employee-management-system-server-4kzb.onrender.com/api/v1/employee/${profileId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -222,7 +222,7 @@ const AddEmployeeForm = ({
   const updateEmployeeData = async () => {
     try {
       const postData = await axios.put(
-        `http://localhost:5000/api/v1/employee/${profileId}`,
+        `https://employee-management-system-server-4kzb.onrender.com/api/v1/employee/${profileId}`,
         {
           name: employeeDetails.name,
           email: employeeDetails.email,
@@ -270,7 +270,7 @@ const AddEmployeeForm = ({
 
   const fecthMyProfileData = async () => {
     try {
-      const response = await axios("http://localhost:5000/api/v1/profile", {
+      const response = await axios("https://employee-management-system-server-4kzb.onrender.com/api/v1/profile", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -38,7 +38,7 @@ const ClaimLeaveRequest = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/v1/leaveRequest",
+        "https://employee-management-system-server-4kzb.onrender.com/api/v1/leaveRequest",
         {
           leaveRequestDate: leaveRequest.leaveDuration,
           leaveType: leaveRequest.leaveType,
